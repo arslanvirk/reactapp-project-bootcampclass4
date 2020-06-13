@@ -1,0 +1,16 @@
+.room  {
+  height: 100vh;
+}
+.btn{
+    width: 70px;
+    margin-left: 5px;
+}
+.lit {
+  background-color: white;
+  color: black;
+}
+
+.dark {
+  background-color: black;
+  color: white;
+}
