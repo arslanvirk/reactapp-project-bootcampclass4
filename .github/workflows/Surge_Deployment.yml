@@ -26,7 +26,9 @@ jobs:
       uses: actions/setup-node@v2-beta
       with:
         node-version: 12
-
+    - name: Prepare for Yarn Installation
+      run: curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add - echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+    - name: Install Yarn
     - uses: borales/actions-yarn@v2.1.0
       with:
         cmd: install
