@@ -33,11 +33,10 @@ jobs:
         
     - name: Build React App
       run: yarn build   
-    
-    - name: Install Surge
-      run: npm install --global surge
       env:
          CI: false
+    - name: Install Surge
+      run: npm install --global surge
     
     - name: Deploy & build surge
       run: surge ./build BootCampClass4ReactMyApp.surge.sh --token ${{ secrets.SURGE_TOKEN }}
