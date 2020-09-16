@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import ReactDOM from "react-dom";
 import "./Room.css";
+import RoomTemprature2 from "./RoomTemprature2"
 
 function RoomTemprature() {
     let [roomtemperature, setRoomTemperature] = useState(72);
@@ -11,6 +12,8 @@ function RoomTemprature() {
         <br />
         <button className="btn" onClick={() => setRoomTemperature(++roomtemperature)}>+</button>
         <button className="btn" onClick={() => setRoomTemperature(--roomtemperature)}>-</button>
+        <br/>
+        <RoomTemprature2 setRoomTemperature = {{setRoomTemperature,roomtemperature}}/> 
       </div>
     );
   }
